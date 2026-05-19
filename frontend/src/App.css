@@ -1040,6 +1040,7 @@
 .works .image-stack img {
   position: absolute;
   width: 86%;
+  height: 290px;
   border-radius: 16px;
   object-fit: cover;
   object-position: top;
