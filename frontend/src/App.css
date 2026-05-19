@@ -986,7 +986,7 @@
 .works .card {
   position: relative;
   width: 400px;
-  min-height: 440px;
+  height: 500px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #9A9A9A ;
   border-radius: 40px;
@@ -1022,7 +1022,7 @@
 .works .card::before {
   content: "";
   position: absolute;
-  top: 68px; /* just below title area */
+  top: 90px; /* just below title area */
   left: 0;
   right: 0;
   height: 1.5px;
