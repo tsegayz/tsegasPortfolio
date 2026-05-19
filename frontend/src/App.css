@@ -1033,14 +1033,14 @@
 .works .image-stack {
   position: relative;
   width: 100%;
-  height: 290px;
+  height: 300px;
   margin-top: 8rem;
 }
 /* All three images share the same position base */
 .works .image-stack img {
   position: absolute;
-  width: 86%;
-  height: 290px;
+  width: 100%;
+  height: 297px;
   border-radius: 16px;
   object-fit: cover;
   object-position: top;
@@ -1054,7 +1054,7 @@
 /* Back image (3rd in DOM = visually behind) */
 .works .image-stack img:nth-child(3) {
   top: 0px;
-  width: 72%;
+  width: 80%;
   opacity: 0.55;
   filter: blur(1px);
   z-index: 1;
@@ -1064,7 +1064,7 @@
 /* Middle image */
 .works .image-stack img:nth-child(2) {
   top: 22px;
-  width: 80%;
+  width: 88%;
   opacity: 0.75;
   z-index: 2;
   transform: translateX(-50%) translateY(0px);
@@ -1073,7 +1073,7 @@
 /* Front image (1st in DOM = on top) */
 .works .image-stack img:nth-child(1) {
   top: 44px;
-  width: 88%;
+  width: 100%;
   opacity: 1;
   z-index: 3;
   transform: translateX(-50%) translateY(0px);
