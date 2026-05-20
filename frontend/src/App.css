@@ -970,9 +970,10 @@
   font-size: 45px;
   font-weight: 400;
   color: #ffffff;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   text-align: start;
   position: relative;
+  margin-left: -77rem;
   z-index: 1;
   letter-spacing: 0.02em;
 }
@@ -993,14 +994,11 @@
   border: 1px solid #9A9A9A ;
   border-radius: 40px;
   padding-top: 30px;
-  backdrop-filter: blur(40px);
-  clip-path: path(
-    "M 10,20 L 60,20 A 10,10 0,0,0 70,10 L 70,10 A 10,10 0,0,1 80,0 L 140,0 A 10,10 0,0,1 150,10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 30,A 10,10 0,0,1 10,20 Z"
-  );
+  backdrop-filter: blur(10px);  
+  clip-path: path("M 40,0 L 360,0 A 40,40 0,0,1 400,40 L 400,360 A 40,40 0,0,1 360,400 L 320,400 A 40,40 0,0,0 280,440 L 280,460 A 40,40 0,0,1 240,500 L 40,500 A 40,40 0,0,1 0,460 L 0,40 A 40,40 0,0,1 40,0 Z");
   overflow: hidden;
-  
+  z-index: 10;
 }
-
 .works .card:hover {
   transform: translateY(-6px);
   box-shadow:
@@ -1060,7 +1058,6 @@
   opacity: 0.55;
   filter: blur(1px);
   z-index: 1;
-  transform: translateX(-50%) translateY(0px);
 }
 
 /* Middle image */
@@ -1069,7 +1066,6 @@
   width: 88%;
   opacity: 0.75;
   z-index: 2;
-  transform: translateX(-50%) translateY(0px);
 }
 
 /* Front image (1st in DOM = on top) */
@@ -1078,7 +1074,7 @@
   width: 100%;
   opacity: 1;
   z-index: 3;
-  transform: translateX(-50%) translateY(0px);
+
 }
 
 /* Hover: fan out slightly */
@@ -1093,21 +1089,25 @@
 }
 
 /* ===== ARROW BUTTON ===== */
+.card-wrapper {
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+
 .works .arrow-btn {
   position: absolute;
-  bottom: 58px;
-  right: 8px;
-  width: 56px;
-  height: 56px;
+  bottom: 10px;
+  right: 28px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: white;
   color: black;
-
-  z-index: 555;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  border: none;
+  font-size: 40px;
 }
-
 /* make it feel embedded */
 .works .card:hover .arrow-btn {
   transform: translateY(-3px) scale(1.08);
@@ -1133,21 +1133,17 @@
 .works .blob {
   position: absolute;
   z-index: 0;
-  filter: blur(40px);
-  opacity: 0.55;
-  pointer-events: none;
 }
 
 .works .blob-1 {
-  top: -80px;
+  top: 1rem;
   left: -80px;
-  width: 300px;
-  animation: floatBlob1 10s ease-in-out infinite alternate;
+  width: 450px;
 }
 
 .works .blob-2 {
-  top: 40px;
+  top: -8rem;
   right: -100px;
-  width: 220px;
-  animation: floatBlob2 12s ease-in-out infinite alternate;
+  width: 550px;
 }
+

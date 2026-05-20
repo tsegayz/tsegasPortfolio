@@ -99,7 +99,7 @@ function Home() {
     let ballY = mouseY;
     let isVisible = false;
 
-    const speed = 0.12; // lower = more bounce
+    const speed = 0.12; 
 
     function onMouseMove(e) {
       mouseX = e.clientX;
@@ -136,9 +136,8 @@ function Home() {
   useEffect(() => {
     const reel = reelRef.current;
     const target = 5;
-    const itemHeight = 40; // MUST match CSS
+    const itemHeight = 40; 
 
-    // scroll to the target number
     reel.style.transform = `translateY(-${target * itemHeight}px)`;
   }, []);
 
@@ -149,7 +148,6 @@ function Home() {
       const subtitle = subtitleRef.current;
       if (!hero || !title || !subtitle) return;
 
-      // On narrow viewports let subtitle flow under the title
       if (window.innerWidth <= 900) {
         subtitle.style.position = "static";
         subtitle.style.left = "";
@@ -163,7 +161,6 @@ function Home() {
       const heroRect = hero.getBoundingClientRect();
       const titleRect = title.getBoundingClientRect();
 
-      // place subtitle roughly under the title using a direct left offset
       const left =
         titleRect.left - heroRect.left + Math.round(titleRect.width * 0.3);
       const top = titleRect.bottom - heroRect.top;
@@ -176,7 +173,6 @@ function Home() {
       title.style.zIndex = "10";
     }
 
-    // initial placement and on resize
     updatePosition();
     window.addEventListener("resize", updatePosition);
     return () => window.removeEventListener("resize", updatePosition);
