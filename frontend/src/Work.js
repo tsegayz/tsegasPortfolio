@@ -8,6 +8,7 @@ import float2 from "./assets/images/float2.png";
 import float3 from "./assets/images/float3.png";
 import float4 from "./assets/images/float4.png";
 import arrow from "./assets/images/arrow.png";
+import Xarrow from "react-xarrows";
 
 const Work = () => {
   const projects = [
@@ -66,7 +67,6 @@ const Work = () => {
         </div>
         <div className="section-two">
           <button className="tag">Selected Works</button>
-
           <h2 className="section-two-title">
             A few things I've poured my time into, built with care, and shipped
           </h2>
@@ -78,17 +78,61 @@ const Work = () => {
             <img className="arrow" src={arrow} />
           </div>
 
-          {/* FLOATING CARD */}
+          {/* FLOATING CARDS */}
           {floats.map((float, index) => (
-            <div className={`preview-card card-${index}`} key={index}>
+            <div
+              id={`card-${index}`}
+              className={`preview-card card-${index}`}
+              key={index}
+            >
               <div className="dot-container">
                 <div className="dot" />
               </div>
               <h3>{float.title}</h3>
               <p>{float.desc}</p>
-              <img src={float.image} alt={float.title} alt="preview" />
+              <img src={float.image} alt={float.title} />
             </div>
           ))}
+          <div id="more-coming" className="more-coming">
+            <span className="star">⭐</span> More coming soon
+          </div>
+
+          <Xarrow
+            start="card-0"
+            end="card-1"
+            strokeWidth={2}
+            showHead={false}
+            dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
+            curveness={0.5}
+            color="white"
+          />
+          <Xarrow
+            start="card-1"
+            end="card-2"
+            showHead={false}
+            strokeWidth={2}
+            dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
+            curveness={0.5}
+            color="white"
+          />
+          <Xarrow
+            start="card-2"
+            end="card-3"
+            showHead={false}
+            strokeWidth={2}
+            dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
+            curveness={0.5}
+            color="white"
+          />
+          <Xarrow
+            start="card-3"
+            end="more-coming"
+            showHead={false}
+            strokeWidth={2}
+            dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
+            curveness={0.5}
+            color="white"
+          />
         </div>
       </div>
     </div>

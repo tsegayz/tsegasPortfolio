@@ -1195,7 +1195,7 @@
 /* FLOATING CARD */
 .preview-card {
   position: absolute;
-  width: 260px;
+  width: 300px;
   padding: 20px 18px;
   display: flex;
   flex-direction: column;
@@ -1209,64 +1209,41 @@
   right: -50rem;
   transform: rotate(-8deg);
 }
-.card-0::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -30rem;
-  width: 28rem;
-  height: 80px;
-  transform: rotate(-20deg);
-  border-top: 2px dashed #9a9a9a;
-  border-right: 2px dashed #9a9a9a;
-  border-top-right-radius: 80px;
-  opacity: 0.7;
-}
 .card-1 {
   top: 30rem;
   right: -2rem;
   transform: rotate(8deg);
-}
-.card-1::after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  right: -140px;
-  width: 140px;
-  height: 80px;
-
-  border-top: 2px dashed #9a9a9a;
-  border-left: 2px dashed #9a9a9a;
-
-  border-top-left-radius: 80px;
 }
 .card-2 {
   top: 58rem;
   right: -45rem;
   transform: rotate(-8deg);
 }
-.card-2::after {
-  content: "";
-  position: absolute;
-
-  width: 160px;
-  height: 100px;
-
-  top: 50%;
-  right: -160px;
-
-  border-top: 2px dashed #9a9a9a;
-  border-right: 2px dashed #9a9a9a;
-
-  border-top-right-radius: 100px;
-
-  opacity: 0.7;
-}
 .card-3 {
   top: 79rem;
   right: -5rem;
   transform: rotate(8deg);
 }
+
+.more-coming {
+  position: absolute;
+  left: 40em;
+  top: 89.5em;
+  padding-left: 30px;
+  font-size: 1.2rem;
+  color: #fff; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.star {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+
+
 /* DOT */
 .dot-container {
   display: flex;
@@ -1274,7 +1251,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  margin-left: 7rem;
+  margin-left: 8.5rem;
   margin-bottom: 10px;
 }
 
@@ -1324,13 +1301,14 @@
 .preview-card p {
   font-size: 12px;
   color: #ccc;
-  margin-bottom: 12px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 /* IMAGE */
 .preview-card img {
   width: 100%;
-  height: 250px; /* fixed */
+  height: 280px; /* fixed */
   object-fit: cover;
   border-radius: 25px;
 }
