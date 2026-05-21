@@ -7,6 +7,7 @@ import float1 from "./assets/images/float1.png";
 import float2 from "./assets/images/float2.png";
 import float3 from "./assets/images/float3.png";
 import float4 from "./assets/images/float4.png";
+import arrow from "./assets/images/arrow.png";
 
 const Work = () => {
   const projects = [
@@ -69,12 +70,13 @@ const Work = () => {
           <h2 className="section-two-title">
             A few things I've poured my time into, built with care, and shipped
           </h2>
-
-          <p className="section-two-text">
-            Here's a hand-picked selection of projects I've worked on, each one
-            taken from idea to delivery.
-          </p>
-          <div className="arrow">↘</div>
+          <div className="arrow-holder">
+            <p className="section-two-text">
+              Here's a hand-picked selection of projects I've worked on, each
+              one taken from idea to delivery.
+            </p>
+            <img className="arrow" src={arrow} />
+          </div>
 
           {/* FLOATING CARD */}
           {floats.map((float, index) => (
@@ -87,7 +89,6 @@ const Work = () => {
               <img src={float.image} alt={float.title} alt="preview" />
             </div>
           ))}
-         
         </div>
       </div>
     </div>
