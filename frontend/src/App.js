@@ -11,7 +11,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Work from "./Work";
 import Contacts from "./Contacts";
-import Socials from "./Socials";
+import Services from "./Services";
 
 function Home() {
   const heroRef = useRef(null);
@@ -374,7 +374,7 @@ export default function App() {
     { id: "contacts", label: "CONTACTS", path: "/contacts" },
     { id: "spacer", label: "" },
     { id: "work", label: "WORK", path: "/work" },
-    { id: "socials", label: "SOCIALS", path: "/socials" },
+    { id: "services", label: "SERVICES", path: "/services" },
   ];
 
   return (
@@ -403,7 +403,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/socials" element={<Socials />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </div>
     </BrowserRouter>

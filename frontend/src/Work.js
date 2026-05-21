@@ -10,7 +10,6 @@ import float4 from "./assets/images/float4.png";
 import arrow from "./assets/images/arrow.png";
 import Xarrow from "react-xarrows";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 const Work = () => {
   const projects = [
@@ -64,20 +63,6 @@ const Work = () => {
     },
   ];
 
-  const contacts = [
-    {
-      id: "email",
-      href: "mailto:tsegayaekob7@gmail.com",
-      icon: <MdOutlineEmail />,
-      label: "tsegayaekob7@gmail.com",
-    },
-    {
-      id: "phone",
-      href: "tel:+251938959856",
-      icon: <MdOutlinePhone />,
-      label: "+251-938-959-856",
-    },
-  ];
   return (
     <div className="works">
       <div className="section-one">
