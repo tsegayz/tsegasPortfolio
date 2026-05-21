@@ -1206,29 +1206,29 @@
 }
 .card-0 {
   top: 18rem;
-  right: -50rem;
+  right: -53rem;
   transform: rotate(-8deg);
 }
 .card-1 {
-  top: 30rem;
-  right: -2rem;
+  top: 35rem;
+  right: 1rem;
   transform: rotate(8deg);
 }
 .card-2 {
-  top: 58rem;
-  right: -45rem;
+  top: 64rem;
+  right: -50rem;
   transform: rotate(-8deg);
 }
 .card-3 {
-  top: 79rem;
-  right: -5rem;
+  top: 84rem;
+  right: -1rem;
   transform: rotate(8deg);
 }
 
 .more-coming {
   position: absolute;
   left: 40em;
-  top: 89.5em;
+  top: 93em;
   padding-left: 30px;
   font-size: 1.2rem;
   color: #fff; 
@@ -1241,8 +1241,6 @@
   font-size: 1.5rem;
   font-weight: 100;
 }
-
-
 
 /* DOT */
 .dot-container {

@@ -9,7 +9,9 @@ import float3 from "./assets/images/float3.png";
 import float4 from "./assets/images/float4.png";
 import arrow from "./assets/images/arrow.png";
 import Xarrow from "react-xarrows";
-
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
 const Work = () => {
   const projects = [
     { title: "WEB DESIGN", image: proj1 },
@@ -21,7 +23,7 @@ const Work = () => {
     {
       title: "EFFOYTA",
       desc: "Mental health app that addresses your issues — mood, support, control.",
-      image: proj1,
+      image: float1,
     },
     {
       title: "Akeray",
@@ -41,7 +43,41 @@ const Work = () => {
       image: float4,
     },
   ];
+  const socials = [
+    {
+      id: "instagram",
+      name: "Instagram",
+      handle: "@graceljacob",
+      icon: <FaInstagram />,
+    },
+    {
+      id: "linkedin",
+      name: "Linkedin",
+      handle: "@tsegayaekob",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      id: "twitter",
+      name: "Twitter",
+      handle: "@gracegeo",
+      icon: <FaXTwitter />,
+    },
+  ];
 
+  const contacts = [
+    {
+      id: "email",
+      href: "mailto:tsegayaekob7@gmail.com",
+      icon: <MdOutlineEmail />,
+      label: "tsegayaekob7@gmail.com",
+    },
+    {
+      id: "phone",
+      href: "tel:+251938959856",
+      icon: <MdOutlinePhone />,
+      label: "+251-938-959-856",
+    },
+  ];
   return (
     <div className="works">
       <div className="section-one">
@@ -111,6 +147,7 @@ const Work = () => {
             end="card-2"
             showHead={false}
             strokeWidth={2}
+            endAnchor="top" 
             dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
             curveness={0.5}
             color="white"
@@ -135,6 +172,23 @@ const Work = () => {
           />
         </div>
       </div>
+      <section className="footer-section">
+        <div className="footer-socials">
+          {socials.map((s) => (
+            <div key={s.id} className="footer-social-item">
+              <div>
+                <p className="social-name">{s.name}</p>
+                <p className="social-handle">{s.handle}</p>
+              </div>
+              <span className="social-icon">{s.icon}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="footer-copy">
+          copyrights2025 @ all rights reserved tsegayaekob7@gmail.com
+        </p>
+      </section>
     </div>
   );
 };
