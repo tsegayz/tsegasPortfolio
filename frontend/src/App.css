@@ -1317,13 +1317,13 @@
 
 .services {
   color: #fff;
-  padding: 6rem 2rem;
+  padding: 6rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.services-avatar {
+.services .one .services-avatar {
   width: 220px;
   height: 220px;
   border-radius: 50%;  
@@ -1332,11 +1332,11 @@
   display: block;
   border: 3px solid #fff; 
 }
-.services-title {
+.services .one .services-title {
   font-size: 2.5rem;
   font-weight: 700;
 }
-.services .tag{
+.services .one .tag{
   position: absolute;
   top: 13em;
   left: 59rem;
@@ -1347,7 +1347,7 @@
   border-radius: 40px;
   backdrop-filter: blur(10px);
 }
-.services-subtitle {
+.services .one .services-subtitle {
   font-size: 45px;
   font-weight: 100;
   color: #ccc;
@@ -1355,11 +1355,10 @@
   text-align: center;
   margin-bottom: 4rem;
 }
-.services-btn {
+.services .one .services-btn {
   background-color: #fff;
   border-radius: 100px;
-  padding: 4Px 0 4px 20px;
-  width: 220px;
+  padding: 4Px 10px 4px 20px;
   font-size: 18px;
   font-weight: 600;
   display: inline-flex;
@@ -1373,12 +1372,12 @@
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.services-btn:hover {
+.services .one .services-btn:hover {
   background-color: #f9f9f9;
   transform: translateY(-2px);
 }
 
-.services-btn .arrow {
+.services .one .services-btn .arrow {
   background-color: black;
   height:45px;
   width:45px;
@@ -1386,5 +1385,64 @@
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
+/* /////////// */
+.services .two {
+  width: 100%;         
+  min-height: 200px;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.services .two .skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 3em;
+  margin-bottom: 60px;
+  padding: 0 20em;
+}
+.services .two .skills-header hr {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #555;
+  margin: 0 15px;
+}
+.services .two .skills-scroll {
+  width: 100vw;   
+  overflow: hidden;
+  position: relative;
+}
+.services .two .scroll-track {
+  display: flex;
+  width: 200%;       
+  animation: scroll-left 20s linear infinite;
+}
+.services .two .logo-item {
+  flex: 0 0 12vw;      
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+.services .two .logo-item .icon {
+  font-size: 4rem;
+  margin-bottom: 8px;
+}
+.services .two .logo-item span {
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move half the track width */
+  }
+}
+
+/* //////// */
