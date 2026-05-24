@@ -19,6 +19,10 @@ import { TfiBrushAlt } from "react-icons/tfi";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { RiArtboardLine } from "react-icons/ri";
 import { LuGitCompareArrows } from "react-icons/lu";
+import { useState } from "react";
+import proj1 from "./assets/images/W1.jpg";
+import proj2 from "./assets/images/W2.jpg";
+import proj3 from "./assets/images/W3.jpg";
 
 const techLogos = [
   { icon: <BiLogoMongodb />, alt: "MongoDB", name: "MongoDB" },
@@ -68,8 +72,15 @@ const servicesRight = [
     desc: "Bold, original design that makes your brand impossible to ignore",
   },
 ];
+  const projects = [
+    { title: "Web Design", image: proj1 },
+    { title: "Figma Design", image: proj2 },
+    { title: "Mobile Application", image: proj3 },
+  ];
 
 const Services = () => {
+  const [activeService, setActiveService] = useState(0);
+
   return (
     <div className="services">
       <div className="one">
@@ -116,30 +127,63 @@ const Services = () => {
         </div>
       </div>
       <div className="three">
-          <div className="col">
-            {servicesLeft.map((s, i) => (
-              <div className="card" key={i}>
-                <div className="card-icon">{s.icon}</div>
-                <div>
-                  <p className="card-title">{s.title}</p>
-                  <p className="card-desc">{s.desc}</p>
-                </div>
+        <div className="col">
+          {servicesLeft.map((s, i) => (
+            <div className="card" key={i}>
+              <div className="card-icon">{s.icon}</div>
+              <div>
+                <p className="card-title">{s.title}</p>
+                <p className="card-desc">{s.desc}</p>
               </div>
-            ))}
-          </div>
-          <img src={workStat} alt="workspace" className="center-img" />
-          <div className="col">
-            {servicesRight.map((s, i) => (
-              <div className="card" key={i}>
-                <div className="card-icon">{s.icon}</div>
-                <div>
-                  <p className="card-title">{s.title}</p>
-                  <p className="card-desc">{s.desc}</p>
-                </div>
+            </div>
+          ))}
+        </div>
+        <img src={workStat} alt="workspace" className="center-img" />
+        <div className="col">
+          {servicesRight.map((s, i) => (
+            <div className="card" key={i}>
+              <div className="card-icon">{s.icon}</div>
+              <div>
+                <p className="card-title">{s.title}</p>
+                <p className="card-desc">{s.desc}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
       </div>
+<div className="four">
+  <div className="services-section">
+    <h2 className="services-heading">How can i help you</h2>
+    
+    <div className="services-content">
+      <div className="services-list">
+        {projects.map((item, i) => (
+          <div
+            key={i}
+            className={`service-item ${activeService === i ? "active" : ""}`}
+            onClick={() => setActiveService(i)}
+          >
+            <div className="service-row">
+              <span className="service-num">(0{i + 1})</span>
+              <span className="service-label">{item.title}</span>
+            </div>
+            <div className="service-divider" />
+          </div>
+        ))}
+        <div className="left-bar" />
+      </div>
+
+      <div className="services-preview">
+        <div className="preview-card">
+          <img
+            src={projects[activeService].image}
+            alt={projects[activeService].title}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   );
 };

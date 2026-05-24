@@ -1172,8 +1172,8 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
-.arrow-holder{
-  display: flex;;
+.arrow-holder {
+  display: flex;
   width: 80rem;
   gap: 5rem;
 }
@@ -1231,7 +1231,7 @@
   top: 93em;
   padding-left: 30px;
   font-size: 1.2rem;
-  color: #fff; 
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1311,10 +1311,7 @@
   border-radius: 25px;
 }
 
-
 /* ////////////////// services section ////////////// */
-
-
 .services {
   color: #fff;
   padding: 6rem 0;
@@ -1326,17 +1323,17 @@
 .services .one .services-avatar {
   width: 220px;
   height: 220px;
-  border-radius: 50%;  
-  object-fit: cover;    
-  margin: 0 auto 1rem;  
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
   display: block;
-  border: 3px solid #fff; 
+  border: 3px solid #fff;
 }
 .services .one .services-title {
   font-size: 2.5rem;
   font-weight: 700;
 }
-.services .one .tag{
+.services .one .tag {
   position: absolute;
   top: 13em;
   left: 59rem;
@@ -1358,7 +1355,7 @@
 .services .one .services-btn {
   background-color: #fff;
   border-radius: 100px;
-  padding: 4Px 10px 4px 20px;
+  padding: 4px 10px 4px 20px;
   font-size: 18px;
   font-weight: 600;
   display: inline-flex;
@@ -1369,7 +1366,9 @@
   font-size: 18px;
   font-weight: 100;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .services .one .services-btn:hover {
@@ -1379,8 +1378,8 @@
 
 .services .one .services-btn .arrow {
   background-color: black;
-  height:45px;
-  width:45px;
+  height: 45px;
+  width: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1389,7 +1388,7 @@
 }
 /* /////////// */
 .services .two {
-  width: 100%;         
+  width: 100%;
   min-height: 200px;
   padding: 40px 0;
   overflow: hidden;
@@ -1411,17 +1410,17 @@
   margin: 0 15px;
 }
 .services .two .skills-scroll {
-  width: 100vw;   
+  width: 100vw;
   overflow: hidden;
   position: relative;
 }
 .services .two .scroll-track {
   display: flex;
-  width: 200%;       
+  width: 200%;
   animation: scroll-left 20s linear infinite;
 }
 .services .two .logo-item {
-  flex: 0 0 12vw;      
+  flex: 0 0 12vw;
   display: flex;
   align-items: center;
   color: #fff;
@@ -1463,7 +1462,7 @@
 
 .services .three .card {
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #9A9A9A;
+  border: 1px solid #9a9a9a;
   border-radius: 30px;
   padding: 24px 32px;
   display: flex;
@@ -1491,7 +1490,7 @@
 }
 
 .services .three .card-icon svg {
-  width: 50px;  
+  width: 50px;
   height: 50px;
 }
 
@@ -1517,3 +1516,105 @@
   object-fit: cover;
   border-radius: 30px;
 }
+
+/* ///////// */
+.services .four .services-section {
+  padding: 60px 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+}
+.services .four .services-heading {
+  font-size: 45px;
+  font-weight: 100;
+  color: #ccc;
+  width: 450px;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 3rem;
+}
+.services .four .services-content {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+.services .four .services-list {
+  position: relative;
+  flex: 1;
+  /* padding-left: 24px; */
+}
+.services .four .left-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  height: 450px;
+}
+.services .four .service-item {
+  padding: 20px 0 0 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.services .four .service-item.active {
+  opacity: 1;
+  border-left: 2px solid #e07070;
+  /* padding: 10px 20px; */
+}
+.services .four .service-item:hover {
+  opacity: 1;
+}
+.services .four .service-row {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  margin-bottom: 26px;
+  padding: 10px 60px;
+  width: 100%;
+}
+
+.services .four .service-num {
+  font-size: 1rem;
+  color: #aaa;
+  letter-spacing: 0.05em;
+}
+
+.services .four .service-label {
+  font-size: 2rem;
+  color: #e8e8e8;
+  font-weight: 300;
+}
+
+.services .four .service-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 4px;
+}
+
+/* Preview card */
+.services .four .services-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.services .four .preview-card {
+  position: relative;
+  width: 400px;
+  height: 420px;
+  border-radius: 30px;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.services .four .preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
