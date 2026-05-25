@@ -173,14 +173,18 @@ const Services = () => {
         <div className="left-bar" />
       </div>
 
-      <div className="services-preview">
-        <div className="preview-card">
-          <img
-            src={projects[activeService].image}
-            alt={projects[activeService].title}
-          />
-        </div>
+<div className="services-preview">
+  <div className="preview-card">
+    {projects.map((item, i) => (
+      <div 
+        key={i}
+        className={`preview-slide-item ${activeService === i ? "active" : ""}`}
+      >
+        <img src={item.image} alt={item.title} />
       </div>
+    ))}
+  </div>
+</div>
     </div>
   </div>
 </div>
