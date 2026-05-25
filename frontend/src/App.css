@@ -773,9 +773,9 @@
 }
 /*  footer css section */
 .footer-section {
-  padding: 5rem 2rem 2rem;
+  padding: 5rem 0 2rem 0;
   text-align: center;
-  width: 98%;
+  width: 100%;
 }
 
 .footer-tag {
@@ -1314,7 +1314,8 @@
 /* ////////////////// services section ////////////// */
 .services {
   color: #fff;
-  padding: 6rem 0;
+  padding: 6rem 0 0;
+  margin: 0;
   text-align: center;
   display: flex;
   flex-direction: column;

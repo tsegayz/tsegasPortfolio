@@ -10,8 +10,10 @@ import {
   FaTrello,
   FaWordpress,
   FaPlaystation,
+  FaInstagram,
+  FaLinkedinIn,
 } from "react-icons/fa";
-import { FaPython } from "react-icons/fa6";
+import { FaPython, FaXTwitter } from "react-icons/fa6";
 import { BiLogoMongodb, BiLogoSpringBoot } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
 import { MdDevices } from "react-icons/md";
@@ -72,13 +74,33 @@ const servicesRight = [
     desc: "Bold, original design that makes your brand impossible to ignore",
   },
 ];
-  const projects = [
-    { title: "Web Design", image: proj1 },
-    { title: "Figma Design", image: proj2 },
-    { title: "Mobile Application", image: proj3 },
-  ];
+const projects = [
+  { title: "Web Design", image: proj1 },
+  { title: "Figma Design", image: proj2 },
+  { title: "Mobile Application", image: proj3 },
+];
 
 const Services = () => {
+  const socials = [
+    {
+      id: "instagram",
+      name: "Instagram",
+      handle: "@graceljacob",
+      icon: <FaInstagram />,
+    },
+    {
+      id: "linkedin",
+      name: "Linkedin",
+      handle: "@tsegayaekob",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      id: "twitter",
+      name: "Twitter",
+      handle: "@gracegeo",
+      icon: <FaXTwitter />,
+    },
+  ];
   const [activeService, setActiveService] = useState(0);
 
   return (
@@ -151,43 +173,60 @@ const Services = () => {
           ))}
         </div>
       </div>
-<div className="four">
-  <div className="services-section">
-    <h2 className="services-heading">How can i help you</h2>
-    
-    <div className="services-content">
-      <div className="services-list">
-        {projects.map((item, i) => (
-          <div
-            key={i}
-            className={`service-item ${activeService === i ? "active" : ""}`}
-            onClick={() => setActiveService(i)}
-          >
-            <div className="service-row">
-              <span className="service-num">(0{i + 1})</span>
-              <span className="service-label">{item.title}</span>
-            </div>
-            <div className="service-divider" />
-          </div>
-        ))}
-        <div className="left-bar" />
-      </div>
+      <div className="four">
+        <div className="services-section">
+          <h2 className="services-heading">How can i help you</h2>
 
-<div className="services-preview">
-  <div className="preview-card">
-    {projects.map((item, i) => (
-      <div 
-        key={i}
-        className={`preview-slide-item ${activeService === i ? "active" : ""}`}
-      >
-        <img src={item.image} alt={item.title} />
+          <div className="services-content">
+            <div className="services-list">
+              {projects.map((item, i) => (
+                <div
+                  key={i}
+                  className={`service-item ${activeService === i ? "active" : ""}`}
+                  onClick={() => setActiveService(i)}
+                >
+                  <div className="service-row">
+                    <span className="service-num">(0{i + 1})</span>
+                    <span className="service-label">{item.title}</span>
+                  </div>
+                  <div className="service-divider" />
+                </div>
+              ))}
+              <div className="left-bar" />
+            </div>
+
+            <div className="services-preview">
+              <div className="preview-card">
+                {projects.map((item, i) => (
+                  <div
+                    key={i}
+                    className={`preview-slide-item ${activeService === i ? "active" : ""}`}
+                  >
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-    </div>
-  </div>
-</div>
+      <section className="footer-section">
+        <div className="footer-socials">
+          {socials.map((s) => (
+            <div key={s.id} className="footer-social-item">
+              <div>
+                <p className="social-name">{s.name}</p>
+                <p className="social-handle">{s.handle}</p>
+              </div>
+              <span className="social-icon">{s.icon}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="footer-copy">
+          copyrights2025 @ all rights reserved tsegayaekob7@gmail.com
+        </p>
+      </section>
     </div>
   );
 };
