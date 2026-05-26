@@ -367,7 +367,6 @@ function Home() {
     </main>
   );
 }
-
 export default function App() {
   const navItems = [
     { id: "home", label: "TSEGA YAEKOB", path: "/" },
@@ -378,7 +377,7 @@ export default function App() {
   ];
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/tsegasPortfolio">
       <div className="App">
         <header className="site-header">
           <nav className="nav-bar">
@@ -392,7 +391,8 @@ export default function App() {
                     <Link to={item.path}>{item.label}</Link>
                   ) : (
                     <span />
-                  )}
+                  )
+                  }
                 </li>
               ))}
             </ul>
