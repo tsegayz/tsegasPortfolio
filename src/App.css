@@ -1647,11 +1647,13 @@
 
 /* Cards & Panels */
 .card-panel {
-  background-color: #9ec3cb33;
+  background-color: #9ec3cb21; 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 30px;
   padding: 3rem;
   position: relative;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden; 
@@ -1702,7 +1704,6 @@
   align-items: start;
   width: 30%;
 }
-/* Container wrap that allows the tag list to flow normally without hitting the image area */
 .clean-content-row {
   position: relative;
   width: 100%;
@@ -1711,7 +1712,7 @@
 }
 
 .grid-left {
-  max-width: 65%; /* Restricts text width so it never overflows into the absolute image */
+  max-width: 85%; 
 }
 .massive-number {
   font-size: 18rem;
