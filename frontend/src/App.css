@@ -2043,61 +2043,52 @@
 .social-link-item:hover .social-text-label {
   text-decoration-color: #ffffff;
 }
-
-
-
 .image-card-cutout {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 370px;  
+  width: 370px;
   height: 250px;
-  background-color: #16171a; /* Matches your core website background color to look like a cutout */
-  border-top-left-radius: 40px; /* The main outer corner curve wrapping the image */
+  background-color: #16171a;
+  border-top-left-radius: 40px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 2rem 0 0 2rem ; /* Pushes the image inwards, creating the clean dark channel track spacing */
+  padding: 2rem 0 0 2rem;
   box-sizing: border-box;
   z-index: 5;
 }
-/* Ensure the parent panel has a relative position for its corner pseudo-elements */
+
 .real-talk-panel {
   position: relative;
 }
 
-/* 1. Inward corner curve for the horizontal (TOP) ledge of the cutout */
 .real-talk-panel::before {
   content: "";
   position: absolute;
-  /* Adjust these values to align with your image container's exact top edge */
-  bottom: 250px; 
+  bottom: 250px;
   right: 0;
   width: 40px;
   height: 40px;
   background: transparent;
-  /* Generates an inverted circular curve filled with your exact semi-transparent panel color */
   background-image: radial-gradient(circle at top left, transparent 40px, #16171a 40px);
   pointer-events: none;
   z-index: 2;
 }
 
-/* 2. Inward corner curve for the vertical (LEFT) wall of the cutout */
 .real-talk-panel::after {
   content: "";
   position: absolute;
   bottom: 0;
-  /* Adjust these values to align with your image container's exact left edge */
-  right: 370px; 
+  right: 370px;
   width: 40px;
   height: 40px;
   background: transparent;
-  /* Generates an inverted circular curve filled with your exact semi-transparent panel color */
   background-image: radial-gradient(circle at top left, transparent 40px, #16171a 40px);
   pointer-events: none;
   z-index: 2;
 }
-/* Smooth inward curve step on the LEFT edge of the cutout */
+
 .panel-img-container::after {
   content: "";
   position: absolute;
@@ -2105,15 +2096,14 @@
   left: -40px;
   width: 40px;
   height: 40px;
-  /* Creates an inverted circle matching your parent background opacity color (#9ec3cb33) */
   background: radial-gradient(circle at top left, transparent 40px, rgba(22, 153, 182, 0.2) 40px);
   pointer-events: none;
 }
-/* Styles the image inside the step perfectly */
+
 .panel-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 28px; /* Perfectly aligns with your UI card design system */
+  border-radius: 28px;
   display: block;
 }
