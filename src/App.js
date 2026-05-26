@@ -1,4 +1,8 @@
 import { useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import PageWrapper from "./PageWrapper";
+
 import { FaLocationArrow, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
@@ -7,7 +11,6 @@ import proj1 from "./assets/images/sec1.jpg";
 import proj2 from "./assets/images/sec2.webp";
 import proj3 from "./assets/images/sec3.jpg";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Work from "./Work";
 import Contacts from "./Contacts";
@@ -367,6 +370,21 @@ function Home() {
     </main>
   );
 }
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+        <Route path="/work" element={<PageWrapper><Work /></PageWrapper>} />
+        <Route path="/contacts" element={<PageWrapper><Contacts /></PageWrapper>} />
+        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   const navItems = [
     { id: "home", label: "TSEGA YAEKOB", path: "/" },
@@ -391,20 +409,15 @@ export default function App() {
                     <Link to={item.path}>{item.label}</Link>
                   ) : (
                     <span />
-                  )
-                  }
+                  )}
                 </li>
               ))}
             </ul>
           </nav>
         </header>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
+        {/* 2. Call the helper component here instead of raw <Routes> */}
+        <AnimatedRoutes />
       </div>
     </BrowserRouter>
   );
