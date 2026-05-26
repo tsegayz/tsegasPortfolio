@@ -69,7 +69,6 @@ const Contacts = () => {
           </div>
         </div>
       </section>
-
       <section className="section-wrapper">
         <div className="split-flex reverse-mobile">
           <div className="content-block">
@@ -86,7 +85,6 @@ const Contacts = () => {
           <div className="massive-number text-right">02</div>
         </div>
       </section>
-
       <section className="section-wrapper">
         <div className="split-flex relative-box">
           <div className="massive-number border-bottom-mobile">03</div>
@@ -97,8 +95,6 @@ const Contacts = () => {
               <br />
               alive
             </h2>
-
-            {/* Grouped together on the same row */}
             <div className="desc-row">
               <p className="section-desc">
                 From concept to creation, I'm here to make sure your vision
@@ -124,8 +120,10 @@ const Contacts = () => {
         </div>
       </section>
       <section className="section-wrapper dense-py">
-        <div className="card-panel relative-box overflow-hidden">
+        {/* Added 'real-talk-panel' class here to easily attach the shape styles */}
+        <div className="card-panel real-talk-panel relative-box overflow-hidden">
           <div className="ambient-glow"></div>
+
           <div className="grid-layout">
             <div className="grid-left">
               <h3 className="panel-subtitle">Real Talk.</h3>
@@ -140,13 +138,15 @@ const Contacts = () => {
                 ))}
               </div>
             </div>
-            <div className="grid-right">
-              <img
+          </div>
+
+          {/* Moved outside grid-layout to properly clip against the bottom-right corner */}
+          <div className="image-card-cutout">
+            <img
               src={proj2}
-                alt="Team working together"
-                className="panel-img"
-              />
-            </div>
+              alt="Team working together"
+              className="panel-img"
+            />
           </div>
         </div>
       </section>

@@ -1589,13 +1589,11 @@
   color: #e8e8e8;
   font-weight: 300;
 }
-
 .services .four .service-divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.12);
   margin-bottom: 4px;
 }
-
 /* Preview card */
 .services .four .services-preview {
   flex: 1;
@@ -1607,10 +1605,10 @@
   width: 400px;
   height: 420px;
   border-radius: 30px;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: transparent;
   border: none;
-} 
+}
 .services .four .preview-slide-item {
   position: absolute;
   top: 0;
@@ -1623,7 +1621,7 @@
   transition:
     opacity 0.4s ease,
     clip-path 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-} 
+}
 .services .four .preview-slide-item.active {
   opacity: 1;
   pointer-events: auto;
@@ -1635,7 +1633,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 30px;}
+  border-radius: 30px;
+}
 
 /* ///////////// contact /////////// */
 /* Base Container Styles mapped to the .contacts wrapper */
@@ -1645,9 +1644,18 @@
   width: 100%;
   background-color: #16171a;
   color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   padding: 0 6rem;
 }
 
@@ -1682,7 +1690,7 @@
   transition: border-color 0.3s ease;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden; /* Clips the inner massive number vertically */
+  overflow: hidden; 
 }
 
 .card-panel:hover {
@@ -1699,18 +1707,18 @@
   border: 1px solid #a8b7c5;
   padding: 2rem;
   border-radius: 30px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .split-flex {
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: start;  
+  text-align: start;
   gap: 3rem;
   width: 80%;
   padding: 0 3rem;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .relative-box {
   position: relative;
@@ -1718,18 +1726,29 @@
 }
 .grid-layout {
   display: grid;
-  flex-direction: column ;
+  flex-direction: column;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
   width: 100%;
 }
 
-.grid-layout.items-start {
-  grid-template-columns: 1fr 1fr;
+.items-start {
+  display: flex;
+  flex-direction: column;
   align-items: start;
+  width: 30%;
+}
+/* Container wrap that allows the tag list to flow normally without hitting the image area */
+.clean-content-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Geometric Sliced Numbers */
+.grid-left {
+  max-width: 65%; /* Restricts text width so it never overflows into the absolute image */
+}
 .massive-number {
   font-size: 18rem;
   font-weight: 900;
@@ -1763,10 +1782,18 @@
 }
 
 /* Desktop Alignment Offsets */
-.indented-1 { transform: translateX(8rem); }
-.indented-2 { transform: translateX(5rem); }
-.indented-3 { transform: translateX(6rem); }
-.indented-left { padding-left: 4rem; }
+.indented-1 {
+  transform: translateX(8rem);
+}
+.indented-2 {
+  transform: translateX(5rem);
+}
+.indented-3 {
+  transform: translateX(6rem);
+}
+.indented-left {
+  padding-left: 4rem;
+}
 
 .section-desc {
   color: #9ca3af;
@@ -1780,13 +1807,11 @@
 }
 .desc-row {
   display: flex;
-  align-items: flex-end; 
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 7rem;
-  width: 100%; 
+  gap: 17rem;
+  width: 100%;
 }
-
-/* Clean up corner-arrow so it stays inside the row flow */
 .corner-arrow {
   display: flex;
   align-items: center;
@@ -1818,8 +1843,7 @@
   font-weight: 300;
   margin: 0 0 2rem 0;
 }
-.split-flex
-.ambient-glow {
+.split-flex .ambient-glow {
   position: absolute;
   left: -2.5rem;
   top: 25%;
@@ -1855,33 +1879,36 @@
   transform: rotate(0deg) !important;
 }
 
-.tag-rotate-neg3 { transform: rotate(-3deg); }
-.tag-rotate-pos2 { transform: rotate(2deg); }
-.tag-rotate-neg1 { transform: rotate(-1deg); }
-.tag-rotate-pos3 { transform: rotate(3deg); }
-.tag-rotate-pos1 { transform: rotate(1deg); }
-.tag-rotate-neg2 { transform: rotate(-2deg); }
-
-.panel-img {
-  width: 100%;
-  max-width: 320px;
-  height: 13rem;
-  object-fit: cover;
-  border-radius: 30px;
+.tag-rotate-neg3 {
+  transform: rotate(-3deg);
 }
-
+.tag-rotate-pos2 {
+  transform: rotate(2deg);
+}
+.tag-rotate-neg1 {
+  transform: rotate(-1deg);
+}
+.tag-rotate-pos3 {
+  transform: rotate(3deg);
+}
+.tag-rotate-pos1 {
+  transform: rotate(1deg);
+}
+.tag-rotate-neg2 {
+  transform: rotate(-2deg);
+}
 /* Giant Typography Footer Style */
 .giant-contact-header {
   user-select: none;
   margin-bottom: 4rem;
-  overflow: hidden; 
+  overflow: hidden;
   height: auto;
 }
 .giant-contact-header h1 {
   font-size: 14rem;
   font-weight: 900;
   letter-spacing: -0.01em;
-  line-height: 0.85; 
+  line-height: 0.85;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -1966,7 +1993,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding-left: 5rem;
+
 }
 
 .social-link-item {
@@ -1993,7 +2020,9 @@
   align-items: center;
   justify-content: center;
   color: #9ca3af;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .social-icon-box svg {
@@ -2013,4 +2042,78 @@
 
 .social-link-item:hover .social-text-label {
   text-decoration-color: #ffffff;
+}
+
+
+
+.image-card-cutout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 370px;  
+  height: 250px;
+  background-color: #16171a; /* Matches your core website background color to look like a cutout */
+  border-top-left-radius: 40px; /* The main outer corner curve wrapping the image */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem 0 0 2rem ; /* Pushes the image inwards, creating the clean dark channel track spacing */
+  box-sizing: border-box;
+  z-index: 5;
+}
+/* Ensure the parent panel has a relative position for its corner pseudo-elements */
+.real-talk-panel {
+  position: relative;
+}
+
+/* 1. Inward corner curve for the horizontal (TOP) ledge of the cutout */
+.real-talk-panel::before {
+  content: "";
+  position: absolute;
+  /* Adjust these values to align with your image container's exact top edge */
+  bottom: 250px; 
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  /* Generates an inverted circular curve filled with your exact semi-transparent panel color */
+  background-image: radial-gradient(circle at top left, transparent 40px, #16171a 40px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 2. Inward corner curve for the vertical (LEFT) wall of the cutout */
+.real-talk-panel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* Adjust these values to align with your image container's exact left edge */
+  right: 370px; 
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  /* Generates an inverted circular curve filled with your exact semi-transparent panel color */
+  background-image: radial-gradient(circle at top left, transparent 40px, #16171a 40px);
+  pointer-events: none;
+  z-index: 2;
+}
+/* Smooth inward curve step on the LEFT edge of the cutout */
+.panel-img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  /* Creates an inverted circle matching your parent background opacity color (#9ec3cb33) */
+  background: radial-gradient(circle at top left, transparent 40px, rgba(22, 153, 182, 0.2) 40px);
+  pointer-events: none;
+}
+/* Styles the image inside the step perfectly */
+.panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px; /* Perfectly aligns with your UI card design system */
+  display: block;
 }
