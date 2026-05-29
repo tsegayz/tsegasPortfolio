@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageWrapper from "./PageWrapper";
@@ -394,19 +394,42 @@ export default function App() {
     { id: "services", label: "SERVICES", path: "/services" },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const brandItem = navItems[0];
+
   return (
     <BrowserRouter basename="/tsegasPortfolio">
       <div className="App">
         <header className="site-header">
           <nav className="nav-bar">
-            <ul className="nav-list">
+            {/* Brand / First Item on the left */}
+            {brandItem && (
+              <div className="nav-brand">
+                <Link to={brandItem.path} onClick={() => setIsOpen(false)}>
+                  {brandItem.label}
+                </Link>
+              </div>
+            )}
+
+            {/* Hamburger Toggle Button */}
+            <button
+              className="menu-toggle"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation"
+            >
+              {isOpen ? "✕" : "☰"}
+            </button>
+
+            <ul className={`nav-list ${isOpen ? "is-open" : ""}`}>
               {navItems.map((item) => (
                 <li
                   key={item.id}
                   className={`nav-item ${item.label === "" ? "empty" : ""}`}
                 >
                   {item.label ? (
-                    <Link to={item.path}>{item.label}</Link>
+                    <Link to={item.path} onClick={() => setIsOpen(false)}>
+                      {item.label}
+                    </Link>
                   ) : (
                     <span />
                   )}
@@ -416,7 +439,7 @@ export default function App() {
           </nav>
         </header>
 
-        {/* 2. Call the helper component here instead of raw <Routes> */}
+        {/* Framing animation system wrapper */}
         <AnimatedRoutes />
       </div>
     </BrowserRouter>
