@@ -1,4 +1,3 @@
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -131,252 +130,6 @@
   z-index: 101;
 }
 
-/* /////////////////responsive ///////// */
-/* --- Mobile First / Responsive Logic (Screens smaller than 768px) --- */
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-list {
-    display: flex; /* Switch from Grid to Flex for column stacking */
-    flex-direction: column;
-    align-items: flex-end; /* Align links to the right like your mockup */
-    gap: 1.5rem;
-    /* Dropdown Positioning */
-    position: absolute;
-    top: 100%;
-    right: 2rem;
-    width: auto;
-    padding: 2rem 1rem 2rem 1rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-  .nav-list.is-open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .nav-item.empty,
-  .nav-item:first-child {
-    display: none;
-  }
-  .nav-item a {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-  }
-  .nav-item a::after {
-    bottom: -2px;
-  }
-  .cursor-ball {
-    display: none;
-  }
-  .hero {
-    padding: 2rem 1rem 0 !important;
-    overflow-x: hidden;
-  }
-  .intro-text {
-    font-size: clamp(14px, 6vw, 12px) !important;
-    margin-bottom: 2rem !important;
-  }
-  .hero-title {
-    margin-left: -2em !important;
-  }
-  .hero-subtitle {
-    margin-top: -3rem !important;
-    margin-left: 2em !important;
-
-  }
-  .title-wrap,
-  .subtitle-wrap {
-    left: 0 !important;
-    margin-top: 0;
-  }
-  .badge {
-    position: relative !important;
-    top: -3rem !important;
-    left: 9rem !important;
-    right: 0 !important;
-    transform: translateY(10px) !important;
-    margin: 1rem auto;
-    font-size: 10px !important;
-    padding: 5px 12px !important;
-  }
-  .badge .badge-arrow {
-    left: -8px !important;
-    width: 12px !important;
-    height: 10px !important;
-    transform: translateY(-50%) rotate(-95deg) !important;
-
-  }
-  .badge-top {
-    top: -4rem !important;
-    left: -4rem !important;
-  }
-  .badge-bottom {
-    top: -0.3rem !important;
-    left: -1rem !important;
-  }
-  .badge-top .badge-arrow {
-    left: 6.4em !important;
-    transform: rotate(0deg) !important;
-  }
-  .badge-bottom .badge-arrow {
-    left: 5.5rem !important;
-    top: -9px !important;
-    transform: rotate(0deg) !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .nav-brand {
-    display: none;
-  }
-
-  .nav-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr 1fr;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .nav-item {
-    justify-self: center;
-  }
-
-  .nav-item a {
-    position: relative;
-    display: inline-block;
-    padding: 0.25rem 0;
-    color: inherit;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-item.empty {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-item.empty span {
-    display: inline-block;
-    width: 4.6rem;
-    height: 2px;
-    margin: 0 4rem;
-    background: currentColor;
-    margin-top: 2.5rem;
-  }
-
-  .nav-item a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    height: 2px;
-    width: 100%;
-    background: currentColor;
-    transform-origin: left;
-    transform: scaleX(1);
-    transition: transform 260ms cubic-bezier(0.2, 0.9, 0.3, 1);
-  }
-
-  .nav-item a:hover::after,
-  .nav-item a:focus::after {
-    transform-origin: left;
-    transform: scaleX(0);
-  }
-  .hero-subtitle {
-    font-size: clamp(38px, 12vw, 320px);
-    margin-top: 4rem;
-    white-space: nowrap;
-  }
-
-  .badge {
-    position: absolute;
-    padding: 10px 32px;
-    font-size: clamp(13px, 1.2vw, 14px);
-  }
-
-  .title-wrap {
-    position: relative;
-    display: inline-block;
-    left: -120px;
-  }
-
-  .badge {
-    left: calc(100% + 50px);
-    top: 6rem;
-    transform: translateX(120px) scale(0.995);
-    animation: slideLeftFade 1200ms cubic-bezier(0.2, 0.9, 0.3, 1) 2100ms
-      forwards;
-  }
-
-  .badge .badge-arrow {
-    position: absolute;
-    left: -12px;
-    top: 0;
-    transform: translateY(-50%) rotate(-95deg);
-    width: 18px;
-    height: 16px;
-    display: block;
-    color: #e4abee;
-  }
-
-  .subtitle-wrap {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .badge-top {
-    background: #9ec3cb;
-    transform: translateX(-50%) translateY(40px) scale(0.995);
-    animation: slideUpFade 900ms cubic-bezier(0.2, 0.9, 0.3, 1) 3200ms forwards;
-    z-index: 65;
-    position: absolute;
-    top: 1.5rem;
-    left: -30rem;
-  }
-
-  .badge-bottom {
-    background: #ff887d;
-    transform: translateX(-4.5rem) translateY(18px) scale(0.995);
-    animation: slideUpFade 900ms cubic-bezier(0.2, 0.9, 0.3, 1) 3200ms forwards;
-    z-index: 65;
-    position: absolute;
-    top: calc(100% + 15rem);
-    left: -4.5rem;
-  }
-
-  .badge-bottom.second {
-    animation-delay: 3950ms;
-  }
-
-  .badge-top .badge-arrow {
-    display: block;
-    left: 8.7rem;
-    top: -8px;
-    color: #9ec3cb;
-    transform: rotate(0deg);
-  }
-
-  .badge-bottom .badge-arrow {
-    display: block;
-    left: 9.5rem;
-    top: -9px;
-    color: #ff887d;
-    transform: rotate(0deg);
-  }
-}
 /* ///////////////////   home page ////////////////*/
 /* Hero heading styles */
 .hero {
@@ -678,6 +431,304 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: #cfd3da;
+}
+
+/* /////////////////responsive ///////// */
+/* --- Mobile First / Responsive Logic (Screens smaller than 768px) --- */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    display: flex; /* Switch from Grid to Flex for column stacking */
+    flex-direction: column;
+    align-items: flex-end; /* Align links to the right like your mockup */
+    gap: 1.5rem;
+    /* Dropdown Positioning */
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    width: auto;
+    padding: 2rem 1rem 2rem 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  .nav-list.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-item.empty,
+  .nav-item:first-child {
+    display: none;
+  }
+  .nav-item a {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  .nav-item a::after {
+    bottom: -2px;
+  }
+  .cursor-ball {
+    display: none;
+  }
+  .hero {
+    padding: 2rem 1rem 0 !important;
+    overflow-x: hidden;
+  }
+  .intro-text {
+    font-size: clamp(14px, 6vw, 12px) !important;
+    margin-bottom: 2rem !important;
+  }
+  .hero-title {
+    margin-left: -2em !important;
+  }
+  .hero-subtitle {
+    margin-top: -3rem !important;
+    margin-left: 2em !important;
+  }
+  .title-wrap,
+  .subtitle-wrap {
+    left: 0 !important;
+    margin-top: 0;
+  }
+  .badge {
+    position: relative !important;
+    top: -3rem !important;
+    left: 9rem !important;
+    right: 0 !important;
+    transform: translateY(10px) !important;
+    margin: 1rem auto;
+    font-size: 10px !important;
+    padding: 5px 12px !important;
+  }
+  .badge .badge-arrow {
+    left: -8px !important;
+    width: 12px !important;
+    height: 10px !important;
+    transform: translateY(-50%) rotate(-95deg) !important;
+  }
+  .badge-top {
+    top: -4rem !important;
+    left: -4rem !important;
+  }
+  .badge-bottom {
+    top: -0.3rem !important;
+    left: -1rem !important;
+  }
+  .badge-top .badge-arrow {
+    left: 6.4em !important;
+    transform: rotate(0deg) !important;
+  }
+  .badge-bottom .badge-arrow {
+    left: 5.5rem !important;
+    top: -9px !important;
+    transform: rotate(0deg) !important;
+  }
+  .collaboration {
+    top: 0;
+    bottom: 0;
+    position: static;
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+
+  .cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    height: 280px !important;
+  }
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    height: 220px !important;
+  }
+  .card-btn {
+    bottom: 10px;
+    left: 10px;
+    font-size: 10px;
+  }
+  .card-btn span:first-child {
+    padding: 10px 15px;
+  }
+  .card-btn .arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .content {
+    max-width: 1280px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+    margin-bottom: 10px !important;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 769px) {
+  .nav-brand {
+    display: none;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-item {
+    justify-self: center;
+  }
+
+  .nav-item a {
+    position: relative;
+    display: inline-block;
+    padding: 0.25rem 0;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-item.empty {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item.empty span {
+    display: inline-block;
+    width: 4.6rem;
+    height: 2px;
+    margin: 0 4rem;
+    background: currentColor;
+    margin-top: 2.5rem;
+  }
+
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 260ms cubic-bezier(0.2, 0.9, 0.3, 1);
+  }
+
+  .nav-item a:hover::after,
+  .nav-item a:focus::after {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  .hero-subtitle {
+    font-size: clamp(38px, 12vw, 320px);
+    margin-top: 4rem;
+    white-space: nowrap;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 10px 32px;
+    font-size: clamp(13px, 1.2vw, 14px);
+  }
+
+  .title-wrap {
+    position: relative;
+    display: inline-block;
+    left: -120px;
+  }
+
+  .badge {
+    left: calc(100% + 50px);
+    top: 6rem;
+    transform: translateX(120px) scale(0.995);
+    animation: slideLeftFade 1200ms cubic-bezier(0.2, 0.9, 0.3, 1) 2100ms
+      forwards;
+  }
+
+  .badge .badge-arrow {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    transform: translateY(-50%) rotate(-95deg);
+    width: 18px;
+    height: 16px;
+    display: block;
+    color: #e4abee;
+  }
+
+  .subtitle-wrap {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .badge-top {
+    background: #9ec3cb;
+    transform: translateX(-50%) translateY(40px) scale(0.995);
+    animation: slideUpFade 900ms cubic-bezier(0.2, 0.9, 0.3, 1) 3200ms forwards;
+    z-index: 65;
+    position: absolute;
+    top: 1.5rem;
+    left: -30rem;
+  }
+
+  .badge-bottom {
+    background: #ff887d;
+    transform: translateX(-4.5rem) translateY(18px) scale(0.995);
+    animation: slideUpFade 900ms cubic-bezier(0.2, 0.9, 0.3, 1) 3200ms forwards;
+    z-index: 65;
+    position: absolute;
+    top: calc(100% + 15rem);
+    left: -4.5rem;
+  }
+
+  .badge-bottom.second {
+    animation-delay: 3950ms;
+  }
+
+  .badge-top .badge-arrow {
+    display: block;
+    left: 8.7rem;
+    top: -8px;
+    color: #9ec3cb;
+    transform: rotate(0deg);
+  }
+
+  .badge-bottom .badge-arrow {
+    display: block;
+    left: 9.5rem;
+    top: -9px;
+    color: #ff887d;
+    transform: rotate(0deg);
+  }
 }
 
 /* ////////////////// value section /////////////////////// */
@@ -2020,7 +2071,7 @@
   letter-spacing: -0.06em;
   opacity: 0.9;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   display: inline-block;
   transform: translateY(25%);
 }
@@ -2165,7 +2216,7 @@
 /* Giant Typography Footer Style */
 .giant-contact-header {
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   margin-bottom: 4rem;
   overflow: hidden;
   height: auto;
