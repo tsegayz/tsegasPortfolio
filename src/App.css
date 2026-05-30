@@ -866,12 +866,12 @@
     padding: 0.6rem 0.5rem !important;
     font-size: 12px;
     flex: 0 1 auto;
-    width: 135px !important; 
+    width: 135px !important;
     max-width: 140px;
     justify-content: center;
   }
   .consume-btn {
-    padding-right: 2.2rem !important; 
+    padding-right: 2.2rem !important;
   }
   .stats-card {
     margin: 0;
@@ -926,6 +926,46 @@
     clip-path: circle(150% at calc(100% - 16px) 50%);
   }
 
+  .showcase-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0rem !important;
+  }
+  .showcase-text {
+    position: static !important;
+    width: 90%;
+    text-align: left;
+  }
+  .showcase-text h2 {
+    font-size: 20px !important;
+    line-height: 1.4;
+    width: 280px;
+    margin: 0;
+  }
+  .showcase-cards {
+    display: flex;
+    position: relative !important;
+    width: 90%;
+    margin-top: -12rem !important;
+  }
+  .showcase-card {
+    position: absolute !important;
+    width: 140px !important;
+    height: 180px !important;
+  }
+  .showcase-card:nth-child(2) {
+    left: 110px !important; 
+    z-index: 2;
+  }
+  .showcase-card:nth-child(3) {
+    left: 220px !important; 
+  }
+  .showcase-label {
+    font-size: 10px !important;
+    padding: 6px 12px !important;
+    margin: 0 12px !important;
+  }
 }
 @media (min-width: 769px) {
   .nav-brand {
