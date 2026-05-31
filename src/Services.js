@@ -119,7 +119,7 @@ const Services = () => {
               style={{
                 transform: "rotate(40deg)",
                 color: "white",
-                fontSize: "16px",
+                fontSize: "16px", 
               }}
             />
           </span>
@@ -176,7 +176,6 @@ const Services = () => {
       <div className="four">
         <div className="services-section">
           <h2 className="services-heading">How can i help you</h2>
-
           <div className="services-content">
             <div className="services-list">
               {projects.map((item, i) => (
