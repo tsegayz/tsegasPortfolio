@@ -8,7 +8,8 @@ import float2 from "./assets/images/float2.png";
 import float3 from "./assets/images/float3.png";
 import float4 from "./assets/images/float4.png";
 import arrow from "./assets/images/arrow.png";
-import Xarrow from "react-xarrows";
+
+import Xarrow, { Xwrapper } from "react-xarrows";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Work = () => {
@@ -86,19 +87,22 @@ const Work = () => {
             </div>
           ))}
         </div>
-        <div className="section-two">
-          <button className="tag">Selected Works</button>
-          <h2 className="section-two-title">
-            A few things I've poured my time into, built with care, and shipped
-          </h2>
-          <div className="arrow-holder">
-            <p className="section-two-text">
-              Here's a hand-picked selection of projects I've worked on, each
-              one taken from idea to delivery.
-            </p>
-            <img className="arrow" src={arrow} />
-          </div>
+      </div>
+      <div className="section-two">
+        <button className="tag">Selected Works</button>
+        <h2 className="section-two-title">
+          A few things I've poured my time into, built with care, and shipped
+        </h2>
+        <div className="arrow-holder">
+          <p className="section-two-text">
+            Here's a hand-picked selection of projects I've worked on, each one
+            taken from idea to delivery.
+          </p>
+          <img className="arrow" src={arrow} alt="arrow" />
+        </div>
 
+        {/* FLOATING CARDS */}
+        <Xwrapper>
           {/* FLOATING CARDS */}
           {floats.map((float, index) => (
             <div
@@ -114,17 +118,21 @@ const Work = () => {
               <img src={float.image} alt={float.title} />
             </div>
           ))}
+
           <div id="more-coming" className="more-coming">
             <span className="star">⭐</span> More coming soon
           </div>
 
+          {/* 2. UPDATE PATH PROPERTIES FOR MOBILE STACKING */}
           <Xarrow
             start="card-0"
             end="card-1"
             strokeWidth={2}
             showHead={false}
             dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
-            curveness={0.5}
+            curveness={
+              0.7
+            } /* Slightly higher curveness helps vertical layout s-curves */
             color="white"
           />
           <Xarrow
@@ -132,9 +140,8 @@ const Work = () => {
             end="card-2"
             showHead={false}
             strokeWidth={2}
-            endAnchor="top" 
             dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
-            curveness={0.5}
+            curveness={0.7}
             color="white"
           />
           <Xarrow
@@ -143,7 +150,7 @@ const Work = () => {
             showHead={false}
             strokeWidth={2}
             dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
-            curveness={0.5}
+            curveness={0.7}
             color="white"
           />
           <Xarrow
@@ -152,10 +159,10 @@ const Work = () => {
             showHead={false}
             strokeWidth={2}
             dashness={{ strokeLen: 6, nonStrokeLen: 6 }}
-            curveness={0.5}
+            curveness={0.4}
             color="white"
           />
-        </div>
+        </Xwrapper>
       </div>
       <section className="footer-section">
         <div className="footer-socials">

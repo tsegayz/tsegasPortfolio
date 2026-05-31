@@ -940,7 +940,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 /* ===== SECTION TITLE ===== */
-.works-title {
+.works .section-one .works-title {
   font-size: 45px;
   font-weight: 400;
   color: #ffffff;
@@ -952,14 +952,14 @@
 }
 
 /* ===== CARDS GRID ===== */
-.works .cards {
+.works .section-one .cards {
   gap: 100px;
   flex-wrap: wrap;
   z-index: 1;
 }
 
 /* ===== SINGLE CARD ===== */
-.works .card {
+.works .section-one .card {
   position: relative;
   width: 400px;
   height: 500px;
@@ -974,7 +974,7 @@
   overflow: hidden;
   z-index: 10;
 }
-.works .card:hover {
+.works .section-one .card:hover {
   transform: translateY(-6px);
   box-shadow:
     0 18px 50px rgba(0, 0, 0, 0.55),
@@ -982,7 +982,7 @@
 }
 
 /* ===== CARD TITLE ===== */
-.works .card-title {
+.works .section-one .card-title {
   font-size: 24px;
   font-weight: 300;
   color: #ffffff;
@@ -994,7 +994,7 @@
 }
 
 /* ===== DIVIDER LINE under title ===== */
-.works .card::before {
+.works .section-one .card::before {
   content: "";
   position: absolute;
   top: 90px; /* just below title area */
@@ -1005,7 +1005,7 @@
 }
 
 /* ===== IMAGE STACK ===== */
-.works .image-stack {
+.works .section-one .image-stack {
   position: relative;
   width: 100%;
   height: 300px;
@@ -1013,7 +1013,7 @@
 }
 
 /* All three images share the same position base */
-.works .image-stack img {
+.works .section-one .image-stack img {
   position: absolute;
   width: 100%;
   height: 297px;
@@ -1027,7 +1027,7 @@
 }
 
 /* Back image (3rd in DOM = visually behind) */
-.works .image-stack img:nth-child(3) {
+.works .section-one .image-stack img:nth-child(3) {
   top: 0px;
   width: 80%;
   opacity: 0.55;
@@ -1036,7 +1036,7 @@
 }
 
 /* Middle image */
-.works .image-stack img:nth-child(2) {
+.works .section-one .image-stack img:nth-child(2) {
   top: 22px;
   width: 88%;
   opacity: 0.75;
@@ -1044,7 +1044,7 @@
 }
 
 /* Front image (1st in DOM = on top) */
-.works .image-stack img:nth-child(1) {
+.works .section-one .image-stack img:nth-child(1) {
   top: 44px;
   width: 100%;
   opacity: 1;
@@ -1052,24 +1052,24 @@
 }
 
 /* Hover: fan out slightly */
-.works .card:hover .image-stack img:nth-child(3) {
+.works .section-one .card:hover .image-stack img:nth-child(3) {
   transform: translateX(-50%) translateY(-8px);
 }
-.works .card:hover .image-stack img:nth-child(2) {
+.works .section-one .card:hover .image-stack img:nth-child(2) {
   transform: translateX(-50%) translateY(-4px);
 }
-.works .card:hover .image-stack img:nth-child(1) {
+.works .section-one .card:hover .image-stack img:nth-child(1) {
   transform: translateX(-50%) translateY(0px);
 }
 
 /* ===== ARROW BUTTON ===== */
-.card-wrapper {
+.works .section-one .card-wrapper {
   position: relative;
   width: 400px;
   height: 500px;
 }
 
-.works .arrow-btn {
+.works .section-one .arrow-btn {
   position: absolute;
   bottom: 10px;
   right: 28px;
@@ -1083,43 +1083,44 @@
   font-size: 40px;
 }
 /* make it feel embedded */
-.works .card:hover .arrow-btn {
+.works .section-one .card:hover .arrow-btn {
   transform: translateY(-3px) scale(1.08);
 }
 
-.works .arrow-btn:hover {
+.works .section-one .arrow-btn:hover {
   transform: scale(1.12) rotate(10deg);
   background: #f0f0f0;
 }
 
-.works .blob {
+.works .section-one .blob {
   position: absolute;
   z-index: 0;
 }
 
-.works .blob-1 {
+.works .section-one .blob-1 {
   top: 9rem;
   left: -100px;
   width: 550px;
 }
 
-.works .blob-2 {
+.works .section-one .blob-2 {
   top: -9rem;
   right: -30px;
   width: 550px;
 }
 
 /* /////////works section 2 /////////////////// */
-.section-two {
+.works .section-two {
   position: relative;
-  margin-top: 150px;
+  margin-top: 10px;
   max-width: 420px;
   position: relative;
   min-height: 120rem;
+  margin-left: -60rem;
   text-align: start;
 }
 
-.section-two .tag {
+.works .section-two .tag {
   border: 2px solid #aaa;
   padding: 12px 32px;
   border-radius: 50px;
@@ -1129,35 +1130,35 @@
   font-size: 14px;
   font-weight: 500;
 }
-.section-two-title {
+.works .section-two-title {
   font-size: 30px;
   font-weight: 100;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 16px;
 }
-.arrow-holder {
+.works .section-two .arrow-holder {
   display: flex;
   width: 80rem;
   gap: 5rem;
 }
 
 /* TEXT */
-.section-two-text {
+.works .section-two-text {
   font-size: 16px;
   width: 400px;
   color: #aaa;
 }
 
 /* ARROW */
-.section-two .arrow {
+.works .section-two .arrow {
   margin-top: 20px;
   font-size: 26px;
   opacity: 0.7;
 }
 
 /* FLOATING CARD */
-.preview-card {
+.works .section-two .preview-card {
   position: absolute;
   width: 300px;
   padding: 20px 18px;
@@ -1168,28 +1169,28 @@
   border-radius: 40px;
   backdrop-filter: blur(10px);
 }
-.card-0 {
+.works .section-two .card-0 {
   top: 18rem;
   right: -53rem;
   transform: rotate(-8deg);
 }
-.card-1 {
+.works .section-two .card-1 {
   top: 35rem;
   right: 1rem;
   transform: rotate(8deg);
 }
-.card-2 {
+.works .section-two .card-2 {
   top: 64rem;
   right: -50rem;
   transform: rotate(-8deg);
 }
-.card-3 {
+.works .section-two .card-3 {
   top: 84rem;
   right: -1rem;
   transform: rotate(8deg);
 }
 
-.more-coming {
+.works .section-two .more-coming {
   position: absolute;
   left: 40em;
   top: 93em;
@@ -1201,13 +1202,13 @@
   gap: 0.5rem;
   width: 100%;
 }
-.star {
+.works .section-two .star {
   font-size: 1.5rem;
   font-weight: 100;
 }
 
 /* DOT */
-.dot-container {
+.works .section-two .dot-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1216,8 +1217,7 @@
   margin-left: 8.5rem;
   margin-bottom: 10px;
 }
-
-.dot {
+.works .section-two .dot {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1231,8 +1231,7 @@
     inset 0 0 0 3px #9a9a9a,
     inset 0 0 0 4px #3a3a3a;
 }
-
-.dot::before {
+.works .section-two .dot::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1244,23 +1243,23 @@
   background: #e0e0e0;
 }
 
-.dot:hover {
+.works .section-two .dot:hover {
   transform: scale(1.05);
 }
 
-.dot:active {
+.works .section-two .dot:active {
   transform: scale(0.95);
 }
 
 /* CARD TEXT */
-.preview-card h3 {
+.works .section-two .preview-card h3 {
   letter-spacing: 2px;
   margin: 0;
   font-size: 28px;
   font-weight: 200;
 }
 
-.preview-card p {
+.works .section-two .preview-card p {
   font-size: 12px;
   color: #ccc;
   margin: 0;
@@ -1268,7 +1267,7 @@
 }
 
 /* IMAGE */
-.preview-card img {
+.works .section-two .preview-card img {
   width: 100%;
   height: 280px; /* fixed */
   object-fit: cover;
@@ -1517,8 +1516,6 @@
   .consume-btn .icon-circle svg {
     font-size: 0.65rem;
   }
-
-  /* Realigns the hover animation focal point to match the new circle position */
   .consume-btn::before {
     clip-path: circle(12px at calc(100% - 16px) 50%);
   }
@@ -1620,12 +1617,10 @@
     font-size: 12px;
     margin: 0 0 0.1rem;
   }
-
   .social-handle {
     font-size: 10px;
     white-space: nowrap;
   }
-
   .social-icon {
     width: 1.8rem;
     height: 1.8rem;
@@ -1634,29 +1629,23 @@
   }
   .works {
     padding-top: 0px;
-    margin: 0rem 1.5rem;
+    margin: 0rem !important;
   }
-  .works-title {
+  .works .section-one .works-title {
     font-size: 24px;
-    padding-left: 1.4rem;
+    padding-left: 0;
     margin-bottom: 30px;
   }
-  .works .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem !important;
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
+  .works .section-one .cards {
+    gap: 3rem;
   }
-  .card-wrapper {
+  .works .section-one .card-wrapper {
     width: 100% !important;
     max-width: 350px !important;
     height: 375px !important;
     position: relative;
   }
-  .works .card {
+  .works .section-one .card {
     width: 100% !important;
     max-width: 350px !important;
     height: 375px !important;
@@ -1668,44 +1657,135 @@
       "M 40,0 L 310,0 A 40,40 0,0,1 350,40 L 350,268 A 30,30 0,0,1 325,300 L 290,300 A 30,30 0,0,0 265,330 L 265,335 A 40,40 0,0,1 225,375 L 40,375 A 40,40 0,0,1 0,335 L 0,40 A 40,40 0,0,1 40,0 Z"
     ) !important;
   }
-  .works .card-title {
-    font-size: 20px;
+  .works .section-one .card-title {
+    font-size: 18px;
     padding-left: 30px;
     margin-bottom: 14px;
   }
-  .works .card::before {
+  .works .section-one .card::before {
     top: 65px;
   }
-  .works .image-stack {
+  .works .section-one .image-stack {
     height: 220px;
     margin-top: 4.5rem;
     width: 100%;
   }
 
-  .works .image-stack img {
+  .works .section-one .image-stack img {
     height: 215px;
   }
 
-  .works .image-stack img:nth-child(2) {
+  .works .section-one .image-stack img:nth-child(2) {
     top: 16px;
   }
 
-  .works .image-stack img:nth-child(3) {
+  .works .section-one .image-stack img:nth-child(3) {
     top: 0px;
   }
-
-  .works .arrow-btn {
+  .works .section-one .arrow-btn {
     bottom: 8px;
     right: 18px;
     width: 52px;
     height: 52px;
     font-size: 28px;
   }
-
-  .works .blob {
+  .works .section-one .blob {
     display: none !important;
   }
+  .works .section-two {
+    margin-top: 60px !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  .works .section-two .section-two-title {
+    font-size: 18px;
+    text-align: start;
+    line-height: 1.3;
+    margin: 0;
+    width: 80% !important;
+  }
+  .works .section-two .arrow-holder {
+    display: flex !important;
+    width: 80% !important;
+    gap: 4rem !important;
+    margin-bottom: 40px !important;
+    align-items: end !important;
+  }
+  .works .section-two-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: start !important;
+    font-size: 12px;
+  }
+  .works .section-two .arrow {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .works .section-two .preview-card {
+    position: relative !important; /* Pulls elements out of desktop absolute layers */
+    width: 320px !important; /* Your requested dimension */
+    height: 350px !important; /* Your requested dimension */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 auto 65px auto !important; /* Creates vertical padding space for Xarrows links */
+    padding: 20px 18px;
+    box-sizing: border-box !important; /* Locks padding sizing parameters inside box limits */
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: start !important; /* Restores clean descriptive text alignment */
+  }
+  .works .section-two .preview-card h3 {
+    font-size: 22px;
+  }
+  .works .section-two .preview-card p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .works .section-two .preview-card img {
+    width: 100% !important;
+    height: 190px !important; /* Downscaled from 280px so text fits inside perfectly */
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  .works .section-two .dot-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 8px;
+  }
+  .works .section-two .more-coming {
+    position: relative !important;
+    left: 0 !important; /* Discards 40em desktop layout side-push */
+    top: 0 !important; /* Discards 93em desktop layout down-push */
+    margin: 40px auto !important; /* Sets balanced whitespace underneath timeline */
+    width: 100% !important;
+    justify-content: center !important;
+    padding-left: 0 !important;
+  }
+.works .section-two {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 40px !important; /* Creates breathing room before footer */
+    overflow: visible !important;
+  }
+  .footer-section {
+    position: relative !important;
+    margin-top: 0 !important; 
+    margin-left: -3rem !important;
+  }
 }
+
 @media (min-width: 769px) {
   .nav-brand {
     display: none;
