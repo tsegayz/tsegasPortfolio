@@ -258,13 +258,11 @@ function Home() {
             <span className="dot" />
             Open to work
           </div>
-
           <h2 className="value-title">
             Crafting Immersive <br />
             Digital Experiences With <br />
             Precision & Innovation
           </h2>
-
           <p className="value-description">
             Hi! I’m Tsega. As a seasoned UI/UX Design Maestro, I bring a wealth
             of experience and a relentless passion for crafting immersive

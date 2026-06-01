@@ -120,10 +120,8 @@ const Contacts = () => {
         </div>
       </section>
       <section className="section-wrapper dense-py">
-        {/* Added 'real-talk-panel' class here to easily attach the shape styles */}
         <div className="card-panel real-talk-panel relative-box overflow-hidden">
           <div className="ambient-glow"></div>
-
           <div className="grid-layout">
             <div className="grid-left">
               <h3 className="panel-subtitle">Real Talk.</h3>
@@ -139,8 +137,6 @@ const Contacts = () => {
               </div>
             </div>
           </div>
-
-          {/* Moved outside grid-layout to properly clip against the bottom-right corner */}
           <div className="image-card-cutout">
             <img
               src={proj2}
