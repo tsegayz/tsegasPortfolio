@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
+  NavLink,
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -455,9 +455,17 @@ export default function App() {
             {/* Brand / First Item on the left */}
             {brandItem && (
               <div className="nav-brand">
-                <Link to={brandItem.path} onClick={() => setIsOpen(false)}>
+                <NavLink
+                  to={brandItem.path}
+                  end
+                  onClick={() => setIsOpen(false)}
+                  // This dynamically adds 'nav-item' class ONLY when you are on the home route
+                  className={({ isActive }) =>
+                    isActive ? "nav-item active-brand" : ""
+                  }
+                >
                   {brandItem.label}
-                </Link>
+                </NavLink>
               </div>
             )}
 
@@ -477,9 +485,13 @@ export default function App() {
                   className={`nav-item ${item.label === "" ? "empty" : ""}`}
                 >
                   {item.label ? (
-                    <Link to={item.path} onClick={() => setIsOpen(false)}>
+                    <NavLink
+                      to={item.path}
+                      end={item.path === "/"} // Prevents home from matching other routes
+                      onClick={() => setIsOpen(false)}
+                    >
                       {item.label}
-                    </Link>
+                    </NavLink>
                   ) : (
                     <span />
                   )}

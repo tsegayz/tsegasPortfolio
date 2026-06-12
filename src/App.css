@@ -107,7 +107,30 @@
   text-decoration: none;
   color: inherit;
 }
+/* Keep your original visible state exactly as it is */
+.nav-item a::after,
+.nav-brand a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 260ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
 
+.nav-item a:hover::after,
+.nav-item a:focus::after,
+.nav-item a.active::after,  
+.nav-brand a:hover::after,
+.nav-brand a:focus::after,
+.nav-brand a.active::after { 
+  transform-origin: left;
+  transform: scaleX(0);
+}
 .menu-toggle {
   display: none;
   background: none;
